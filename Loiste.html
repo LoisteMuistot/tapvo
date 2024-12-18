@@ -591,7 +591,7 @@
         </div>
         <div class="question">
             <p>Mitä Loisteen IG biossa lukee?</p>
-            <button onclick="checkAnswer(this, true)">Treenataan pari kertaa viikossa, pääaisassa omaksi iloksi</button>
+            <button onclick="checkAnswer(this, true)">Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi</button>
             <button onclick="checkAnswer(this, false)">Treenataan pari kertaa viikossa, omaksi iloksi</button>
             <button onclick="checkAnswer(this, false)">Treenataan pari kertaa viikossa, voimistelun ilosta nauttien</button>
             <button onclick="checkAnswer(this, false)">Treenataan pari kertava viikossa tavoitteellisesti</button>
@@ -604,27 +604,33 @@
             <button onclick="checkAnswer(this, true)">Julietin kassista löytyneet banaanit</button>
         </div>
         <div class="question">
-            <p>Mikä on Loisteen epävirallinen maskotti?</p>
-            <button onclick="checkAnswer(this, false)">Pinkki yksisarvinen</button>
-            <button onclick="checkAnswer(this, false)">Laamaa</button>
-            <button onclick="checkAnswer(this, false)">Vessapaperirulla, joka pitää kuvauspuhelimen pystyssä</button>
-            <button onclick="checkAnswer(this, true)">Julietin kassista löytyneet banaanit</button>
+            <p>Mistä Loiste voitti seuran kevätnäytöksessä kiertopokaalin vuonna 2023?</p>
+            <button onclick="checkAnswer(this, false)">Ryhmän suuruudesta</button>
+            <button onclick="checkAnswer(this, false)">Valmentajasta</button>
+            <button onclick="checkAnswer(this, false)">Kisa tuloksista kaudella</button>
+            <button onclick="checkAnswer(this, true)">Hyvän seurahengen ylläpitämisestä</button>
         </div>
     </div>
     <p id="result"></p>
     <script>
-        let correctAnswers = 0;
-        function checkAnswer(button, isCorrect) {
-            if (isCorrect) {
-                button.style.backgroundColor = "lightgreen";
-                correctAnswers++;
-            } else {
-                button.style.backgroundColor = "red";
-            }
-            button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
-            document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
+    let correctAnswers = 0;
+    function checkAnswer(button, isCorrect, correctAnswer) {
+        // Jos vastaus on väärin, näytetään oikea vastaus keltaisena
+        if (!isCorrect) {
+            button.style.backgroundColor = "red";  // Väärä vastaus punaiseksi
+            const buttons = button.parentNode.querySelectorAll("button");
+            buttons.forEach(btn => {
+                if (btn.innerHTML === correctAnswer) {
+                    btn.style.backgroundColor = "yellow"; // Oikea vastaus keltaiseksi
+                }
+            });
+        } else {
+            button.style.backgroundColor = "lightgreen";  // Oikea vastaus vihreäksi
         }
-    </script>
+        button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true); // Estetään uusintavalinta
+        document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
+    }
+</script>
 
 
         
