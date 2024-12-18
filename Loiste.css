@@ -54,6 +54,24 @@ body {
     text-decoration: none; /* Poistetaan alleviivaus */
     font-size: 24px; /* Muutetaan fonttikoko */
   }
+/* Skaalataan tekstiä pienemmäksi mobiililaitteilla */
+@media (max-width: 768px) {
+    .carousel-caption {
+        top: 70%; /* Säädetään tekstiä hieman ylemmäs mobiilissa */
+    }
+
+    .carousel-caption h3 {
+        font-size: 18px; /* Tekstin koko pienenee mobiilissa */
+    }
+
+    .carousel-caption p {
+        font-size: 14px; /* Alalauseen koko pienenee mobiilissa */
+    }
+
+    .carousel-caption a {
+        font-size: 18px; /* Linkin fonttikoko pienenee mobiilissa */
+    }
+}
 
   /* Linkin hover-efekti */
   .carousel-caption a:hover {
