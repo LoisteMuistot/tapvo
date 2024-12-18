@@ -270,3 +270,14 @@ input[type="reset"]:hover {
 .points {
   color: #007BFF;
 }
+
+ a {
+        color: #E1306C; /* Instagramin brändiväri */
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        text-decoration: underline;
+        color: #C13584;
+    }
