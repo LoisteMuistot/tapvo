@@ -603,24 +603,28 @@
     </div>
     <p id="result"></p>
     <script>
-    let correctAnswers = 0;
-    function checkAnswer(button, isCorrect, correctAnswer) {
-        // Jos vastaus on väärin, näytetään oikea vastaus keltaisena
-        if (!isCorrect) {
-            button.style.backgroundColor = "red";  // Väärä vastaus punaiseksi
-            const buttons = button.parentNode.querySelectorAll("button");
-            buttons.forEach(btn => {
-                if (btn.innerHTML === correctAnswer) {
-                    btn.style.backgroundColor = "yellow"; // Oikea vastaus keltaiseksi
-                }
-            });
-        } else {
-            button.style.backgroundColor = "lightgreen";  // Oikea vastaus vihreäksi
-        }
-        button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true); // Estetään uusintavalinta
-        document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
+        let correctAnswers = 0;
+
+function checkAnswer(button, isCorrect, correctAnswer) {
+    if (isCorrect) {
+        button.style.backgroundColor = "lightgreen";  // Oikea vastaus vihreäksi
+        correctAnswers++;
+    } else {
+        button.style.backgroundColor = "red";  // Väärä vastaus punaiseksi
+        // Etsitään oikea vastaus ja värjätään se keltaiseksi
+        const buttons = button.parentNode.querySelectorAll("button");
+        buttons.forEach(btn => {
+            if (btn.innerHTML === correctAnswer) {
+                btn.style.backgroundColor = "yellow";  // Oikea vastaus keltaiseksi
+            }
+        });
     }
-</script>
+    // Estetään uusintavalinta
+    button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
+    // Näytetään oikeiden vastausten määrä
+    document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
+}
+    </script>
 
 
         
