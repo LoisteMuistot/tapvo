@@ -1,0 +1,46 @@
+[
+  {
+    "registrationId": 254403,
+    "categoryId": 51620,
+    "participantName": "Loiste",
+    "clubName": "Tapiolan Voimistelijat",
+    "countryCode": "FIN",
+    "roundResults": [
+      {
+        "registrationId": 254403,
+        "roundId": 52103,
+        "roundName": "Alkukilpailu",
+        "totalPoints": 16.867,
+        "programResults": [
+          {
+            "totalPoints": 16.867,
+            "pointsByType": {
+              "TV": 4.65,
+              "AV_BONUS": 0,
+              "EXE": 8.15,
+              "AV": 4.067
+            }
+          }
+        ]
+      },
+      {
+        "registrationId": 254403,
+        "roundId": 52106,
+        "roundName": "Finaali",
+        "totalPoints": 17.566,
+        "programResults": [
+          {
+            "totalPoints": 17.566,
+            "pointsByType": {
+              "TV": 4.7,
+              "AV_BONUS": 0,
+              "EXE": 8.733,
+              "AV": 4.133
+            }
+          }
+        ]
+      }
+    ],
+    "totalPoints": 34.433
+  }
+]
