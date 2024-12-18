@@ -341,21 +341,3 @@ h1 {
 }
 
 
-
- 
-
-  /* Skaalaa tekstiä karusellissa pienemmiksi mobiililaitteilla */
-  @media (max-width: 768px) {
-    .carousel-caption h3 {
-      font-size: 1.2rem;
-    }
-    .carousel-caption p {
-      font-size: 1rem;
-    }
-  }
-
-  /* Varmista, että kuvat skaalautuvat oikein */
-  .carousel-item img {
-    object-fit: cover;  /* Täyttää alueen säilyttäen kuvan mittasuhteet */
-    height: 60vh;  /* Määritä kuva korkeudeksi 60% näkymän korkeudesta */
-  }
