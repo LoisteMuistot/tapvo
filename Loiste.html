@@ -563,68 +563,69 @@
     </div>
     <script src="Loiste.js"></script>
 
-    <h1>Kuinka hyvin tunnet Loisteen?</h1>
-    <div id="quiz">
-        <div class="question">
-            <p>Kuinka monta Lehtosta on Loisteessa? </p>
-            <button onclick="checkAnswer(this, false)">0</button>
-            <button onclick="checkAnswer(this, false)">1</button>
-            <button onclick="checkAnswer(this, true)">3</button>
-            <button onclick="checkAnswer(this, false)">5</button>
-        </div>
-        <div class="question">
-            <p>Kuka Loistelainen on voimistellut joukueessa pisimpään?</p>
-            <button onclick="checkAnswer(this, true)">Helmi</button>
-            <button onclick="checkAnswer(this, false)">Tuuli</button>
-            <button onclick="checkAnswer(this, false)">Juliet</button>
-            <button onclick="checkAnswer(this, false)">Lotta</button>
-        </div>
-        <div class="question">
-            <p>Mitä Loisteen IG biossa lukee?</p>
-            <button onclick="checkAnswer(this, true)">Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi</button>
-            <button onclick="checkAnswer(this, false)">Treenataan pari kertaa viikossa, omaksi iloksi</button>
-            <button onclick="checkAnswer(this, false)">Treenataan pari kertaa viikossa, voimistelun ilosta nauttien</button>
-            <button onclick="checkAnswer(this, false)">Treenataan pari kertava viikossa tavoitteellisesti</button>
-        </div>
-        <div class="question">
-            <p>Mikä on Loisteen epävirallinen maskotti?</p>
-            <button onclick="checkAnswer(this, false)">Pinkki yksisarvinen</button>
-            <button onclick="checkAnswer(this, false)">Laamaa</button>
-            <button onclick="checkAnswer(this, false)">Vessapaperirulla, joka pitää kuvauspuhelimen pystyssä</button>
-            <button onclick="checkAnswer(this, true)">Julietin kassista löytyneet banaanit</button>
-        </div>
-        <div class="question">
-            <p>Mistä Loiste voitti seuran kevätnäytöksessä kiertopokaalin vuonna 2023?</p>
-            <button onclick="checkAnswer(this, false)">Ryhmän suuruudesta</button>
-            <button onclick="checkAnswer(this, false)">Valmentajasta</button>
-            <button onclick="checkAnswer(this, false)">Kisa tuloksista kaudella</button>
-            <button onclick="checkAnswer(this, true)">Hyvän seurahengen ylläpitämisestä</button>
-        </div>
+   <h1>Kuinka hyvin tunnet Loisteen?</h1>
+<div id="quiz">
+    <div class="question">
+        <p>Kuinka monta Lehtosta on Loisteessa? </p>
+        <button onclick="checkAnswer(this, false, '3')">0</button>
+        <button onclick="checkAnswer(this, false, '3')">1</button>
+        <button onclick="checkAnswer(this, true, '3')">3</button>
+        <button onclick="checkAnswer(this, false, '3')">5</button>
     </div>
-    <p id="result"></p>
-    <script>
-        let correctAnswers = 0;
+    <div class="question">
+        <p>Kuka Loistelainen on voimistellut joukueessa pisimpään?</p>
+        <button onclick="checkAnswer(this, true, 'Helmi')">Helmi</button>
+        <button onclick="checkAnswer(this, false, 'Helmi')">Tuuli</button>
+        <button onclick="checkAnswer(this, false, 'Helmi')">Juliet</button>
+        <button onclick="checkAnswer(this, false, 'Helmi')">Lotta</button>
+    </div>
+    <div class="question">
+        <p>Mitä Loisteen IG biossa lukee?</p>
+        <button onclick="checkAnswer(this, true, 'Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi')">Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi</button>
+        <button onclick="checkAnswer(this, false, 'Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi')">Treenataan pari kertaa viikossa, omaksi iloksi</button>
+        <button onclick="checkAnswer(this, false, 'Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi')">Treenataan pari kertaa viikossa, voimistelun ilosta nauttien</button>
+        <button onclick="checkAnswer(this, false, 'Treenataan pari kertaa viikossa, pääasiassa omaksi iloksi')">Treenataan pari kertava viikossa tavoitteellisesti</button>
+    </div>
+    <div class="question">
+        <p>Mikä on Loisteen epävirallinen maskotti?</p>
+        <button onclick="checkAnswer(this, false, 'Julietin kassista löytyneet banaanit')">Pinkki yksisarvinen</button>
+        <button onclick="checkAnswer(this, false, 'Julietin kassista löytyneet banaanit')">Laamaa</button>
+        <button onclick="checkAnswer(this, false, 'Julietin kassista löytyneet banaanit')">Vessapaperirulla, joka pitää kuvauspuhelimen pystyssä</button>
+        <button onclick="checkAnswer(this, true, 'Julietin kassista löytyneet banaanit')">Julietin kassista löytyneet banaanit</button>
+    </div>
+    <div class="question">
+        <p>Mistä Loiste voitti seuran kevätnäytöksessä kiertopokaalin vuonna 2023?</p>
+        <button onclick="checkAnswer(this, false, 'Hyvän seurahengen ylläpitämisestä')">Ryhmän suuruudesta</button>
+        <button onclick="checkAnswer(this, false, 'Hyvän seurahengen ylläpitämisestä')">Valmentajasta</button>
+        <button onclick="checkAnswer(this, false, 'Hyvän seurahengen ylläpitämisestä')">Kisa tuloksista kaudella</button>
+        <button onclick="checkAnswer(this, true, 'Hyvän seurahengen ylläpitämisestä')">Hyvän seurahengen ylläpitämisestä</button>
+    </div>
+</div>
+<p id="result"></p>
 
-function checkAnswer(button, isCorrect, correctAnswer) {
-    if (isCorrect) {
-        button.style.backgroundColor = "lightgreen";  // Oikea vastaus vihreäksi
-        correctAnswers++;
-    } else {
-        button.style.backgroundColor = "red";  // Väärä vastaus punaiseksi
-        // Etsitään oikea vastaus ja värjätään se keltaiseksi
-        const buttons = button.parentNode.querySelectorAll("button");
-        buttons.forEach(btn => {
-            if (btn.innerHTML === correctAnswer) {
-                btn.style.backgroundColor = "yellow";  // Oikea vastaus keltaiseksi
-            }
-        });
+<script>
+    let correctAnswers = 0;
+
+    function checkAnswer(button, isCorrect, correctAnswer) {
+        if (isCorrect) {
+            button.style.backgroundColor = "lightgreen";  // Oikea vastaus vihreäksi
+            correctAnswers++;
+        } else {
+            button.style.backgroundColor = "red";  // Väärä vastaus punaiseksi
+            // Etsitään oikea vastaus ja värjätään se keltaiseksi
+            const buttons = button.parentNode.querySelectorAll("button");
+            buttons.forEach(btn => {
+                if (btn.innerHTML === correctAnswer) {
+                    btn.style.backgroundColor = "yellow";  // Oikea vastaus keltaiseksi
+                }
+            });
+        }
+        // Estetään uusintavalinta
+        button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
+        // Näytetään oikeiden vastausten määrä
+        document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
     }
-    // Estetään uusintavalinta
-    button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
-    // Näytetään oikeiden vastausten määrä
-    document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
-}
-    </script>
+</script>
 
 
         
