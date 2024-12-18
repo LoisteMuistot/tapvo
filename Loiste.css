@@ -346,14 +346,22 @@ body {
     background-color: #fff;
     color: #000;
     transition: background-color 0.3s ease, color 0.3s ease;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 header {
+    position: relative;
     padding: 20px;
     text-align: center;
 }
 
+/* Napin sijoittaminen oikeaan reunaan */
 button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
     padding: 10px 20px;
     font-size: 16px;
     cursor: pointer;
