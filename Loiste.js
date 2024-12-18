@@ -46,3 +46,14 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.addEventListener("DOMContentLoaded", () => {
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    timelineItems.forEach((item) => {
+        item.addEventListener("click", () => {
+            timelineItems.forEach((el) => el.classList.remove("active"));
+            item.classList.add("active");
+            alert(`Vuosi ${item.dataset.year}: ${item.querySelector("p").textContent}`);
+        });
+    });
+});
