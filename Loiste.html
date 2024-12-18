@@ -562,6 +562,62 @@
         </div>
     </div>
     <script src="Loiste.js"></script>
+
+    <h1>Kuinka hyvin tunnet Loisteen?</h1>
+    <div id="quiz">
+        <div class="question">
+            <p>Kuinka monta Lehtosta on Loisteessa? </p>
+            <button onclick="checkAnswer(this, false)">0</button>
+            <button onclick="checkAnswer(this, false)">1</button>
+            <button onclick="checkAnswer(this, true)">3</button>
+            <button onclick="checkAnswer(this, false)">5</button>
+        </div>
+        <div class="question">
+            <p>Kuka Loistelainen on voimistellut joukueessa pisimpään?</p>
+            <button onclick="checkAnswer(this, true)">Helmi</button>
+            <button onclick="checkAnswer(this, false)">Tuuli</button>
+            <button onclick="checkAnswer(this, false)">Juliet</button>
+            <button onclick="checkAnswer(this, false)">Lotta</button>
+        </div>
+        <div class="question">
+            <p>Mitä Loisteen IG biossa lukee?</p>
+            <button onclick="checkAnswer(this, true)">Treenataan pari kertaa viikossa, pääaisassa omaksi iloksi</button>
+            <button onclick="checkAnswer(this, false)">Treenataan pari kertaa viikossa, omaksi iloksi</button>
+            <button onclick="checkAnswer(this, false)">Treenataan pari kertaa viikossa, voimistelun ilosta nauttien</button>
+            <button onclick="checkAnswer(this, false)">Treenataan pari kertava viikossa tavoitteellisesti</button>
+        </div>
+        <div class="question">
+            <p>Mikä on Loisteen epävirallinen maskotti?</p>
+            <button onclick="checkAnswer(this, false)">Pinkki yksisarvinen</button>
+            <button onclick="checkAnswer(this, false)">Laamaa</button>
+            <button onclick="checkAnswer(this, false)">Vessapaperirulla, joka pitää kuvauspuhelimen pystyssä</button>
+            <button onclick="checkAnswer(this, true)">Julietin kassista löytyneet banaanit</button>
+        </div>
+        <div class="question">
+            <p>Mikä on Loisteen epävirallinen maskotti?</p>
+            <button onclick="checkAnswer(this, false)">Pinkki yksisarvinen</button>
+            <button onclick="checkAnswer(this, false)">Laamaa</button>
+            <button onclick="checkAnswer(this, false)">Vessapaperirulla, joka pitää kuvauspuhelimen pystyssä</button>
+            <button onclick="checkAnswer(this, true)">Julietin kassista löytyneet banaanit</button>
+        </div>
+    </div>
+    <p id="result"></p>
+    <script>
+        let correctAnswers = 0;
+        function checkAnswer(button, isCorrect) {
+            if (isCorrect) {
+                button.style.backgroundColor = "lightgreen";
+                correctAnswers++;
+            } else {
+                button.style.backgroundColor = "red";
+            }
+            button.parentNode.querySelectorAll("button").forEach(btn => btn.disabled = true);
+            document.getElementById("result").textContent = `Oikeita vastauksia: ${correctAnswers}`;
+        }
+    </script>
+
+
+        
 </div>
 </div>
 
