@@ -1,0 +1,272 @@
+
+/*navipalkin väri*/
+.navbar-custom {background-color: rgba(90, 130, 92, 0.838);}
+/*navipalkin linkin väri*/
+.navbar-custom a {color: rgb(76, 71, 71);}
+
+/* aktiivisen & hover-linkin väri */
+.navbar-custom .nav-item.active .nav-link,
+.navbar-custom .nav-item:hover .nav-link {
+    color: #030202;
+}
+
+/*hampurilaiskuviin väri*/
+.custom-toggler .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255,255,255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+  }
+  
+  /*kehys hamppariin*/
+  .custom-toggler.navbar-toggler {
+    border-color: rgba(236, 235, 236, 0.5);
+}
+
+body {
+    font-family: 'Patrick Hand SC', sans-serif; /* Käytetään Patrick Hand SC -fonttia koko sivulla */
+}
+
+h1, h2 {
+    font-family: 'Bebas Neue', sans-serif; /* Käytetään Bebas Neue -fonttia otsikoissa */
+}
+
+body {
+    margin-top: 60px; /* Lisää marginaalia ylös, jotta sisältö ei mene navin päälle */
+}
+
+/* Tehdään kuva suhteelliseksi, jotta linkki voidaan sijoittaa kuvan päälle */
+.carousel-item {
+    position: relative;
+  }
+
+  /* Keskitetään teksti kuvan päälle */
+  .carousel-caption {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white; /* Tekstin väri valkoinen */
+    text-align: center; /* Keskitetään teksti */
+    z-index: 10; /* Varmistetaan, että teksti on kuvan päällä */
+  }
+
+  /* Poistetaan alleviivaus ja asetetaan linkin väri valkoiseksi */
+  .carousel-caption a {
+    color: white; /* Linkin väri valkoinen */
+    text-decoration: none; /* Poistetaan alleviivaus */
+    font-size: 24px; /* Muutetaan fonttikoko */
+  }
+
+  /* Linkin hover-efekti */
+  .carousel-caption a:hover {
+    color: rgb(49, 49, 48); /* Muutetaan väri hoverissa */
+  }
+
+  .nav-link.active {
+    color: white !important;
+  }
+  body { position: relative; 
+  }
+
+  /*hampurilasvalikko reunaan */
+
+  /* Asetetaan hampurilaisvalikon nappi oikealle reunalle pienillä näytöillä */
+  .navbar-toggler {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 1050; /* Yli muiden elementtien */
+  }
+
+  /* Piilotetaan pudotusvalikko isoilla näytöillä */
+  .nav-item.dropdown {
+    display: none;
+  }
+
+  /* Näytetään pudotusvalikko vain pienillä näytöillä */
+  @media (max-width: 768px) {
+    .nav-item.dropdown {
+      display: block;
+    }
+  }
+  label.muoto {
+    display: inline-block;
+    width: 6em;
+    text-align: right;
+    vertical-align: top;
+}
+
+
+
+
+/* Yleinen lomakkeen tyyli */
+form {
+    font-family: "Arial", sans-serif;
+    background-color: #ffffff; /* Valkoinen tausta */
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 30px auto;
+    line-height: 1.6;
+    color: #333; /* Musta teksti */
+}
+
+/* Lomakekentät ja painikkeet */
+input[type="text"],
+input[type="tel"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px 15px;
+    margin: 10px 0 20px;
+    border: 1px solid #d1c4a0; /* Sinapin harmaa reunus */
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #333; /* Musta teksti */
+    background-color: #fffdf5; /* Vaalea sinapin sävy */
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="tel"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #e0b759; /* Pehmeä sinapin sävy */
+    outline: none;
+    background-color: #fffdf0; /* Hieman vaaleampi tausta */
+    box-shadow: 0 0 8px rgba(224, 183, 89, 0.3);
+}
+
+/* Radiobutton ja checkbox */
+input[type="checkbox"],
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2); /* Suurempi painike */
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #555; /* Tumma harmaa */
+}
+
+textarea {
+    resize: vertical; /* Sallii korkeuden muuttamisen */
+}
+
+/* Painikkeiden tyyli */
+input[type="button"],
+input[type="reset"] {
+    padding: 12px 20px;
+    margin: 10px 5px 0 0;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Lähetä-painike */
+input[type="button"] {
+    background-color: #e0b759; /* Sinapin sävy */
+    color: #fff; /* Valkoinen teksti */
+}
+
+input[type="button"]:hover {
+    background-color: #d4a449; /* Tummempi sinapin sävy */
+    transform: translateY(-2px);
+}
+
+/* Tyhjennä-painike */
+input[type="reset"] {
+    background-color: #333; /* Musta */
+    color: #fff; /* Valkoinen teksti */
+}
+
+input[type="reset"]:hover {
+    background-color: #555; /* Vaaleampi musta hover */
+    transform: translateY(-2px);
+}
+
+/* Div-elementti tulosteelle */
+#tiedot {
+    margin-top: 25px;
+    padding: 20px;
+    border: 1px solid #e0d7b8; /* Vaalea sinapin sävy */
+    background-color: #fffdf5; /* Vaalea sinappi */
+    border-radius: 8px;
+    font-size: 16px;
+    color: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    line-height: 1.5;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Kolme kuvaa per rivi */
+  gap: 0; /* Ei väliä kuvien välillä */
+}
+
+.photo-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Rajataan videoiden maksimileveys ja keskitetään ne */
+.carousel-item .ratio {
+  max-width: 600px; /* Asetetaan maksimileveys */
+  margin: 0 auto;  /* Keskitetään video */
+}
+
+  /* Yleinen video-karusellin tyyli */
+  .carousel-item .ratio {
+    max-width: 560px; /* Oletusleveys */
+    aspect-ratio: 16 / 9; /* Vaakasuuntainen video */
+    margin: 0 auto;
+}
+
+/* Viimeisen videon yksilöllinen tyyli */
+.carousel-item .ratio.short-video {
+    max-width: 360px; /* Kapeampi leveys */
+    aspect-ratio: 9 / 16; /* Pystysuuntaisen videon kuvasuhde */
+}
+
+ /* Yleinen video-karusellin tyyli */
+ .carousel-item .ratio {
+  max-width: 560px; /* Oletusleveys pääkarusellille */
+  aspect-ratio: 16 / 9; /* Vaakasuuntainen video */
+  margin: 0 auto;
+}
+
+/* Shorts-videoiden yksilöllinen tyyli */
+#shortsCarousel .ratio {
+  max-width: 360px; /* Kapea shorts-leveys */
+  aspect-ratio: 9 / 16; /* Pystysuuntainen kuvasuhde */
+  margin: 0 auto;
+}
+
+/*testailuu JSON*/
+.result-container {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px 0;
+}
+.result-header {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+.round-result {
+  margin-bottom: 10px;
+}
+.round-header {
+  font-weight: bold;
+}
+.points {
+  color: #007BFF;
+}
